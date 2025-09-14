@@ -1,0 +1,65 @@
+/* Part 1: Button Hover Effect */
+.hover-button {
+  background-color: #b10f38;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-button:hover {
+  background-color: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Part 1: Fade-in Animation */
+.fade-in {
+  animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Part 1: Continuous Slide */
+.slide {
+  animation: slideLeft 3s linear infinite;
+}
+
+@keyframes slideLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100px); }
+}
+
+/* Part 3: Box Animation */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  transition: transform 0.5s ease;
+  margin-top: 20px;
+}
+
+.box.animate {
+  transform: translateX(200px);
+}
+
+/* Part 3: Modal Animation */
+.modal {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.modal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
